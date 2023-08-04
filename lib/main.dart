@@ -1,4 +1,4 @@
-import 'package:fleet_roving_driver/pages/splash_screen.dart';
+import 'package:fleet_roving_driver/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
