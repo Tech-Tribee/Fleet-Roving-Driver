@@ -45,20 +45,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           title: Column(
             children: [
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   children: [
-              //      Text(
-              //   '6:18',
-              //   style: TextStyle(fontSize: 20),
-              // ),
-              // Text(
-              //   'Airtel',
-              //   style: TextStyle(fontSize: 20),
-              // ),
-              //   ],
-              // ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,

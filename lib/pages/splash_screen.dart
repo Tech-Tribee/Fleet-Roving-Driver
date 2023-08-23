@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:fleet_roving_driver/pages/login_page.dart';
 import 'package:fleet_roving_driver/utils/colors.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen>
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.topLeft,
-            colors: [AppColors.slateGray, AppColors.dodgerBlue],
+            colors: [AppColors.whiteColor, AppColors.dodgerBlue],
           ),
         ),
         child: Center(

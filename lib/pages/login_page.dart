@@ -1,6 +1,6 @@
 import 'package:fleet_roving_driver/components/app_bar.dart';
 import 'package:fleet_roving_driver/components/text_field.dart';
-import 'package:fleet_roving_driver/pages/profile_page.dart';
+import 'package:fleet_roving_driver/pages/dash_bord.dart';
 import 'package:flutter/material.dart';
 import 'package:fleet_roving_driver/utils/colors.dart';
 
@@ -82,7 +82,7 @@ Widget buildSignInButton(BuildContext context) {
       String userEmail = emailText.text.toString();
       String userpass = passwordText.text;
       print('Email: $userEmail pass: $userpass');
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => MyProfile(),
