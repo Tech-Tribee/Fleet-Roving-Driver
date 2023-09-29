@@ -5,7 +5,7 @@ import 'package:fleet_roving_driver/pages/bills_page.dart';
 import 'package:fleet_roving_driver/pages/dash_bord.dart';
 import 'package:fleet_roving_driver/pages/login_page.dart';
 import 'package:fleet_roving_driver/pages/previous_trip.dart';
-import 'package:fleet_roving_driver/pages/trip_details.dart';
+import 'package:fleet_roving_driver/pages/trip_information.dart';
 
 import 'package:flutter/material.dart';
 

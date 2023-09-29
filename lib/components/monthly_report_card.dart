@@ -19,65 +19,72 @@ class MonthlyReportCard extends StatelessWidget {
         minWidth: 155,
         minHeight: 90,
       ),
-      child: Card(
+      child: Material(
         elevation: 5.0,
-        margin: const EdgeInsets.symmetric(vertical: 5),
-        shadowColor: AppColors.transparentBlack,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(16.0),
-            bottomRight: Radius.circular(16.0),
-          ),
+        borderRadius:const BorderRadius.only(
+          bottomLeft: Radius.circular(16.0),
+          bottomRight: Radius.circular(16.0),
         ),
-        child: Container(
-          color: AppColors.whiteColor,
-          height: 92,
-          width: cardWidth * 0.45,
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                title,
-                style:
-                    const TextStyle(fontSize: 14, color: AppColors.slateGray),
+        child: InkWell(
+          onTap: () {
+            // Handle tap event if needed
+          },
+          child: Container(
+            decoration:const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(16.0),
+                bottomRight: Radius.circular(16.0),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    '$symbol $value',
-                    style: const TextStyle(
-                        fontSize: 20, color: AppColors.darkBlue),
-                  ),
-                  Container(
-                    height: 30,
-                    width: 30,
-                    decoration: BoxDecoration(
-                      color: AppColors.dodgerBlue,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.circular(8),
+              color: AppColors.whiteColor,
+            ),
+            height: 92,
+            width: cardWidth * 0.45,
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(fontSize: 14, color: AppColors.slateGray),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      '$symbol $value',
+                      style: const TextStyle(
+                          fontSize: 20, color: AppColors.darkBlue),
                     ),
-                    child: Center(
-                      child: Container(
-                        width: 16,
-                        height: 16,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage('assets/images/world.png'),
-                            fit: BoxFit.cover,
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                        color: AppColors.dodgerBlue,
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Center(
+                        child: Container(
+                          width: 16,
+                          height: 16,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage('assets/images/world.png'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                ],
-              ),
-            ],
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+

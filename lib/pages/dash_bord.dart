@@ -21,12 +21,12 @@ class _MyProfileState extends State<MyProfile> {
           padding:const EdgeInsets.symmetric(horizontal:15,),
            child:const Column(
                children: [
-          ProfileCard(profileImageUrl: 'assets/images/profile.png',name:'Driver Name', id:'ID here'),
+          ProfileCard(profileImageUrl: 'assets/images/profile.png',name:'Amar kumar', id:'2174586'),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               MonthlyReportCard(title: 'Total trips this month', value: 12),
-              MonthlyReportCard(title: 'Total revenue this month',symbol: '₹', value: 12000),
+              MonthlyReportCard(title: 'Total revenue this month',symbol: '₹', value: 9260),
             ],
           )
           ],

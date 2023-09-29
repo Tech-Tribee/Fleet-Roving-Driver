@@ -1,8 +1,11 @@
+// import 'dart:io';
+
 import 'package:fleet_roving_driver/components/app_bar.dart';
 import 'package:fleet_roving_driver/components/text_field.dart';
 import 'package:fleet_roving_driver/pages/dash_bord.dart';
 import 'package:flutter/material.dart';
 import 'package:fleet_roving_driver/utils/colors.dart';
+// import 'package:http/http.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -74,6 +77,36 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+// Future<bool> driverLogin(String email, String password) async  {
+//   try {
+//     print('Email: $email pass: $password');
+//     Response response = await post(
+//       Uri.parse("http://192.168.43.90:8880/api/v1/users/login"),
+//       body: {'email': email, 'password': password},
+//     );
+
+//     if (response.statusCode == 200) {
+//       // Successful login
+//       print('Login successful');
+//       //      var data=jsonDecode(response.body);
+//       return true;
+      
+//     } else {
+//       // Handle other status codes, e.g., show an error message
+//       print('Login failed with status code ${response.statusCode}');
+//         return false;
+
+//       // You can display an error message to the user here.
+//     }
+//   } catch (e) {
+//     // Handle network or other exceptions
+//     print('Error: $e');
+    
+//     // You can display an error message to the user here.
+//   }
+//   return false;
+// }
+
 
 Widget buildSignInButton(BuildContext context) {
   return 
@@ -82,12 +115,17 @@ Widget buildSignInButton(BuildContext context) {
       String userEmail = emailText.text.toString();
       String userpass = passwordText.text;
       print('Email: $userEmail pass: $userpass');
-      Navigator.pushReplacement(
+      // Future<bool> isLogin = driverLogin(userEmail, userpass);
+      // if(isLogin == true){
+        Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => MyProfile(),
         ),
       );
+      // }
+     
+      
     },
       style: ElevatedButton.styleFrom(
       backgroundColor: Colors.blue,
