@@ -1,3 +1,4 @@
+import 'package:fleet_roving_driver/pages/trip_information.dart';
 import 'package:flutter/material.dart';
 import 'package:fleet_roving_driver/components/status_button.dart';
 import 'package:fleet_roving_driver/utils/colors.dart';
@@ -26,6 +27,14 @@ class TripDetails extends StatelessWidget {
         textColor: AppColors.darkBlack,
         tileColor: AppColors.whiteColor,
         titleTextStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+        onTap: () {
+        Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>const TripInformation(),
+        ),
+        );
+          },
         title: Center(
           child: Row(
             children: [

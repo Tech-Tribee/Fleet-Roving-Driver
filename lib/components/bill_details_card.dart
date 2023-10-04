@@ -1,4 +1,5 @@
 import 'package:fleet_roving_driver/components/status_button.dart';
+import 'package:fleet_roving_driver/pages/trip_information.dart';
 import 'package:fleet_roving_driver/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,9 @@ class BillDetailsCard extends StatelessWidget {
 
     return ConstrainedBox(
       constraints: const BoxConstraints(
-        minWidth: 300,
+        minWidth: 200,
         maxWidth: 400,
-        minHeight: 180,
+        minHeight: 150,
       ),
       child: Container(
         margin: const EdgeInsets.all(14.0),
@@ -27,7 +28,12 @@ class BillDetailsCard extends StatelessWidget {
               ),
         child:InkWell(
           onTap: () {
-            // Handle tap event if need
+        Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>const TripInformation(),
+        ),
+        );
           },
           child: Container(
             decoration:const BoxDecoration(
@@ -45,8 +51,8 @@ class BillDetailsCard extends StatelessWidget {
                 _buildInfoRow1Item('Trip ID', tripInfo['Trip ID'] ?? ''),
                 _buildInfoRow2Items('Pick Up', tripInfo['Pick Up'] ?? '','Distance', tripInfo['Distance'] ?? ''),
                 _buildInfoRow2Items('Drop', tripInfo['Drop'] ?? '','Bill Amount', '₹${tripInfo['Bill Amount'] ?? ''}'),
-                _buildInfoBtnRow('Status', tripInfo['Status'] ?? '','Bill Status', tripInfo['Bill Status'] ?? ''),
-                _buildInfoRow1Item('No. of passengers', tripInfo['No. of passengers'] ?? ''),
+               _buildInfoRow2Items('Status', tripInfo['Status'] ?? '','No. of passengers', tripInfo['No. of passengers'] ?? ''),
+                _buildInfoBtnRow('Bill Status', tripInfo['Bill Status'] ?? ''),
               ],
             ),
           ),
@@ -65,7 +71,7 @@ Widget _buildInfoRow2Items(String label1, String value1,String label2, String va
           Text(
             "$label1 : $value1",
             style: const TextStyle(
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: FontWeight.w500,
               color: AppColors.darkBlack, // Adjust color as needed
             ),
@@ -73,7 +79,7 @@ Widget _buildInfoRow2Items(String label1, String value1,String label2, String va
           Text(
             '$label2 : $value2',
             style: const TextStyle(
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: FontWeight.w500,
               color: AppColors.darkBlack, // Adjust color as needed
             ),
@@ -84,28 +90,19 @@ Widget _buildInfoRow2Items(String label1, String value1,String label2, String va
   }
 
 
-  Widget _buildInfoBtnRow(String label1, String value1,String label2, String value2){
+  Widget _buildInfoBtnRow(String label1, String value1){
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 1.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "$label1 : $value1",
-            style: const TextStyle(
-              fontSize: 10,
-              fontWeight: FontWeight.w500,
-              color:AppColors.darkBlack, // Adjust color as needed
-            ),
-          ),
+        children: [ 
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children :[
           Text(
-            '$label2 : ',
+            '$label1 : ',
             style: const TextStyle(
-            fontSize: 10,
+            fontSize: 12,
             fontWeight: FontWeight.w500,
             color:AppColors.darkBlack, // Adjust color as needed
             ),
@@ -128,11 +125,12 @@ Widget _buildInfoRow2Items(String label1, String value1,String label2, String va
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             '$label: ',
             style: const TextStyle(
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: FontWeight.w500,
               color: Colors.black, // Adjust color as needed
             ),
@@ -140,7 +138,7 @@ Widget _buildInfoRow2Items(String label1, String value1,String label2, String va
           Text(
             value,
             style: const TextStyle(
-              fontSize: 10,
+              fontSize: 12,
               fontWeight: FontWeight.w500,
               color: Colors.black, // Adjust color as needed
             ),

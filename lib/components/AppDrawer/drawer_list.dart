@@ -1,12 +1,9 @@
 
 import 'package:fleet_roving_driver/components/AppDrawer/menu_items.dart';
-
 import 'package:fleet_roving_driver/pages/bills_page.dart';
 import 'package:fleet_roving_driver/pages/dash_bord.dart';
 import 'package:fleet_roving_driver/pages/login_page.dart';
 import 'package:fleet_roving_driver/pages/previous_trip.dart';
-import 'package:fleet_roving_driver/pages/trip_information.dart';
-
 import 'package:flutter/material.dart';
 
 class MyDrawerList extends StatefulWidget {
@@ -43,7 +40,7 @@ class _MyDrawerListState extends State<MyDrawerList> {
           
           CustomMenuItem(iconName:'Profile',  iconType: Icons.man_2_outlined,onTap: () {
           Navigator.pop(context);
-          Navigator.of(context).push(MaterialPageRoute(builder:(context)=>const TripInformation()));
+          Navigator.of(context).push(MaterialPageRoute(builder:(context)=> MyProfile()));
           },),
           
           CustomMenuItem(iconName:'Log out',  iconType: Icons.logout_outlined,onTap: () {

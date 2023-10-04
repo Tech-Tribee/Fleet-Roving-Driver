@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 const tripData = [
   {
     'Sl.no': '1',
-    'Trip ID': '#285123',
+    'Trip ID': '#365758',
     'Distance': '10 Km',
     'Number of Boarding People': '5',
     'Status': 'Completed',

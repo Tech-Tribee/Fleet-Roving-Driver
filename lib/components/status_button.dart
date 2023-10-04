@@ -23,7 +23,7 @@ class StatusButton extends StatelessWidget {
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: bgColor,
-        minimumSize:const Size(55, 20),
+        minimumSize:const Size(50, 20),
         maximumSize:const Size(58, 21),
         padding:const EdgeInsets.all(1), 
         shape:const RoundedRectangleBorder(

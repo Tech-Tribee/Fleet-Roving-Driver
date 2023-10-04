@@ -30,8 +30,8 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
               ),
             ),
           ),
-          Text('Amar kumar', style: Theme.of(context).textTheme.titleMedium,),
-          Text('amarkumar@gmail.com', style: Theme.of(context).textTheme.titleMedium,),
+          Text('Nikita Patel', style: Theme.of(context).textTheme.titleMedium,),
+          Text('nikita56@gmail.com', style: Theme.of(context).textTheme.titleMedium,),
 
         ],
       ),
