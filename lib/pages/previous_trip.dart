@@ -16,7 +16,7 @@ const tripData = [
     'Trip ID': '#895456',
     'Distance': '8 Km',
     'Number of Boarding People': '3',
-    'Status': 'In Progress',
+    'Status': 'Completed',
 
   },
     {

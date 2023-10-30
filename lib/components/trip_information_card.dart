@@ -19,13 +19,13 @@ const passengersInfo = [
     'Name': 'Bob Smith',
     'Phno': '555852XXXX',
     'Drop location': 'Wilson Garden',
-    'Action': 'Drop',
+    'Action': 'In Ride',
   },
   {
     'Name': 'Alice Johnson',
     'Phno': '111852XXXX',
     'Drop location': 'Electronic City',
-    'Action': 'Drop',
+    'Action': 'IN Ride',
   },
 ];
 
