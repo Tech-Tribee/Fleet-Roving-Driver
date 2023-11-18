@@ -26,7 +26,7 @@ class _MyProfileState extends State<MyProfile> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               MonthlyReportCard(title: 'Total trips this month', value: 12),
-              MonthlyReportCard(title: 'Total revenue this month',symbol: '₹', value: 12000),
+              MonthlyReportCard(title: 'Total revenue this month',symbol: '₹', value: 12090),
             ],
           )
           ],
