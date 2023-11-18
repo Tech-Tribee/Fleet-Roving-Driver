@@ -1,6 +1,5 @@
-# fleet_roving_driver
+# fleet_roving_driver Flutter app
 
-A new Flutter project.
 
 ## Getting Started
 
